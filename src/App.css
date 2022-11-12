@@ -1,5 +1,24 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  /* light theme */
+  --light-color: #72b626;
+  --light-background-color: #fff;
+  --light-text-name-color: #72b626;
+  --light-text-job-color: #B6E388;
+  --light-text-intro-color: rgb(129, 128, 128);
+
+  /* dark theme */
+  --dark-color: #72b626;
+  --dark-background-color: #333;
+  --dark-text-name-color: #FFB400;
+  --dark-text-job-color: #f8c651;
+  --dark-text-intro-color: rgb(240, 236, 236);
+
+  --shadow-style: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+

@@ -1,10 +1,15 @@
 import "./App.css";
-import CompHome from "./pages//homePage/home";
+import Menu from "./menu/Menu";
+import CompHome from "./pages/homePage/Home";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <CompHome />
+        <Menu />
+        <Routes>
+            <Route path = "/" index element={<CompHome />} />
+        </Routes>
     </div>
   );
 }

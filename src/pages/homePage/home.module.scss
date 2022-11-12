@@ -1,4 +1,10 @@
 
+.homePage{
+    background-color: var(--light-background-color);
+    height: 100vh;
+    z-index: -9999;
+}
+
 .blockColor {
   height: 200%;
   width: 100%;
@@ -6,7 +12,7 @@
   background-color: #72b626;
   position: fixed;
   left: -75%;
-  z-index: -9999;
+//   z-index: -1;
 }
 
 .image {
@@ -36,7 +42,7 @@
 .name {
     font-size: 60px;
     font-weight: 800;
-    color: #72b626;
+    color: var(--light-text-name-color);
     text-transform: uppercase;
     margin: 0;
 }
@@ -44,7 +50,7 @@
 .job {
     font-size: 30px;
     font-weight: 600;
-    color: #B6E388;
+    color: var(--light-text-job-color);
     text-transform: uppercase;
     margin: 10px 0;
 }
@@ -57,5 +63,5 @@
     margin: 0;
     line-height: 35px;
     text-align: justify;
-    color: rgb(129, 128, 128);
+    color: var(--light-text-intro-color);
 }
