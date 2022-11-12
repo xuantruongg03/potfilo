@@ -1,0 +1,61 @@
+
+.blockColor {
+  height: 200%;
+  width: 100%;
+  transform: rotate(-15deg);
+  background-color: #72b626;
+  position: fixed;
+  left: -75%;
+  z-index: -9999;
+}
+
+.image {
+    position: absolute;
+    left: 7%;
+    height: 623px;
+    width: 400px;
+    background-image: url("https://lelan-profile.netlify.app/static/media/profile-img.cb7c6e765e293aa071ac.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+.textBox {
+    width: 54%;
+    position: absolute;
+    left: 37%;
+    top: 25%;
+}
+
+.name {
+    font-size: 60px;
+    font-weight: 800;
+    color: #72b626;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.job {
+    font-size: 30px;
+    font-weight: 600;
+    color: #B6E388;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.intro {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 35px;
+    text-align: justify;
+    color: rgb(129, 128, 128);
+}
