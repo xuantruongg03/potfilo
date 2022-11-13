@@ -25,15 +25,21 @@ function Menu() {
             <FontAwesomeIcon icon={faHome} className={style.iconMenu} />
           </div>
         </Link>
-        <div className={style.boxIconMenu}>
-          <FontAwesomeIcon icon={faBriefcase} className={style.iconMenu} />
-        </div>
-        <div className={style.boxIconMenu}>
-          <FontAwesomeIcon icon={faUser} className={style.iconMenu} />
-        </div>
-        <div className={style.boxIconMenu}>
-          <FontAwesomeIcon icon={faEnvelope} className={style.iconMenu} />
-        </div>
+        <Link>
+          <div className={style.boxIconMenu}>
+            <FontAwesomeIcon icon={faBriefcase} className={style.iconMenu} />
+          </div>
+        </Link>
+        <Link to="/about">
+          <div className={style.boxIconMenu}>
+            <FontAwesomeIcon icon={faUser} className={style.iconMenu} />
+          </div>
+        </Link>
+        <Link>
+          <div className={style.boxIconMenu}>
+            <FontAwesomeIcon icon={faEnvelope} className={style.iconMenu} />
+          </div>
+        </Link>
         <div className={style.boxIconMenu} onClick={handleChangeTheme}>
           {isDark ? (
             <FontAwesomeIcon icon={faMoon} className={style.iconMenu} />
