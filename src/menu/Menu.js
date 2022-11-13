@@ -17,29 +17,22 @@ function Menu() {
   //đổi màu nền
   const handleChangeTheme = () => setIsDark(!isDark);
 
+  const iconMenu = [
+    { link: "/", icon: faHome, name: "Home" },
+    { link: "/project", icon: faBriefcase, name: "Project" },
+    { link: "/about", icon: faUser, name: "About" },
+    { link: "/contact", icon: faEnvelope, name: "Contact" },
+  ];
   return (
     <div className="menu">
       <div className={style.box}>
-        <Link to="/" className="link">
+        {iconMenu.map((item) => (
           <div className={style.boxIconMenu}>
-            <FontAwesomeIcon icon={faHome} className={style.iconMenu} />
+            <Link to={item.link} className={style.link}>
+              <FontAwesomeIcon icon={item.icon} className={style.iconMenu} />
+            </Link>
           </div>
-        </Link>
-        <Link>
-          <div className={style.boxIconMenu}>
-            <FontAwesomeIcon icon={faBriefcase} className={style.iconMenu} />
-          </div>
-        </Link>
-        <Link to="/about">
-          <div className={style.boxIconMenu}>
-            <FontAwesomeIcon icon={faUser} className={style.iconMenu} />
-          </div>
-        </Link>
-        <Link>
-          <div className={style.boxIconMenu}>
-            <FontAwesomeIcon icon={faEnvelope} className={style.iconMenu} />
-          </div>
-        </Link>
+        ))}
         <div className={style.boxIconMenu} onClick={handleChangeTheme}>
           {isDark ? (
             <FontAwesomeIcon icon={faMoon} className={style.iconMenu} />
