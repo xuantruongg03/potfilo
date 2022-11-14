@@ -26,12 +26,12 @@ function Menu() {
   return (
     <div className="menu">
       <div className={style.box}>
-        {iconMenu.map((item) => (
-          <div className={style.boxIconMenu}>
-            <Link to={item.link} className={style.link}>
+        {iconMenu.map((item, key) => (
+          <Link to={item.link} className={style.link} key = {key}>
+            <div className={style.boxIconMenu}>
               <FontAwesomeIcon icon={item.icon} className={style.iconMenu} />
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
         <div className={style.boxIconMenu} onClick={handleChangeTheme}>
           <FontAwesomeIcon

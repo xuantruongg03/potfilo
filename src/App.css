@@ -6,14 +6,14 @@
 
 body {
   /* light theme */
-  --light-color: #72b626;
+  --light-color: #7BDB6B;
   --light-background-color: #fff;
-  --light-text-name-color: #72b626;
+  --light-text-name-color: #7BDB6B;
   --light-text-job-color: #B6E388;
   --light-text-intro-color: rgb(129, 128, 128);
 
   /* dark theme */
-  --dark-color: #72b626;
+  --dark-color: #7BDB6B;
   --dark-background-color: #333;
   --dark-text-name-color: #FFB400;
   --dark-text-job-color: #f8c651;

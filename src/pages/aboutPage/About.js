@@ -7,7 +7,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { useState } from "react";
+import Title from "../../title/Title";
 import style from "./About.module.scss";
+import cv from "../../assets/doc/Xuan-Truong.pdf";
 
 const info = [
   {
@@ -80,25 +82,17 @@ const Skills = [
 ];
 
 function About() {
-  const downloadCV = () => {
-    window.open(
-      "https://drive.google.com/file/d/11IuH7Zu9Hz7SMvzmALAx-JYDYD4Vkamo/view?usp=sharing"
-    );
-  };
 
   const [isLeft, setIsLeft] = useState(true);
 
   const hanldeChangeView = () => setIsLeft(!isLeft);
 
+  const data = {background: "About", title: "About Me"};
+
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <div className={style.boxTitle}>
-          <div className={style.titleBackground}>AboutMe</div>
-          <h1 className={style.title}>
-            ABOUT <span className={style.span}>ME</span>
-          </h1>
-        </div>
+        <Title data = {data}/>
         {isLeft ? (
           <div>
             <div>
@@ -114,15 +108,15 @@ function About() {
                       <span className={style.content}> {item.value} </span>
                     </li>
                   ))}
-                  <div className={style.downloadCV}>
-                    <div className={style.boxDownloadCV} onClick={downloadCV}>
+                  <a href={cv} download className={style.downloadCV}>
+                    <div className={style.boxDownloadCV}>
                       <FontAwesomeIcon
                         icon={faCloudArrowDown}
                         className={style.downloadCVIcon}
                       />
                     </div>
                     <h4 className={style.lableDownloadCV}>Download My CV</h4>
-                  </div>
+                  </a>
                 </ul>
                 <div className={style.exp}>
                   {Experience.map((item) => (

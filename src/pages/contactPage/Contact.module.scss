@@ -1,0 +1,79 @@
+.container {
+    margin: 0 200px;
+    min-height: 100vh;
+}
+
+.contact {
+    display: flex;
+
+    .image {
+        width: 50%;
+        margin-right: 10px;
+
+        .mail{
+            width: 70%;
+            margin-left: 50px;
+            // height: 200px;
+        }
+    }
+
+    .form {
+        margin-left: 10px;
+        width: 50%;
+
+        .yourInfo {
+            width: 46%;
+            margin: 10px;
+            height: 50px;
+            border-radius: 30px;
+            padding: 10px;
+            padding-left: 30px;
+            background-color: #EEEEEE;
+            border: none;
+            &:focus{
+                outline: 0.5px solid #72b626 ;
+            }
+        }
+
+        .subject{
+            width: 96%;
+            margin: 10px;
+        }
+
+        .textArea {
+            width: 96%;
+            height: 200px;
+            border-radius: 30px;
+            background-color: #EEEEEE;
+            margin: 10px;
+            border: none;
+            padding: 10px;
+            padding-left: 30px;
+            &:focus{
+                outline: 0.5px solid #72b626 ;
+            }
+        }
+
+        .button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            padding: 0.5rem;
+            border-radius: 50%;
+            background-color: #7BDB6B;
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            margin-right: 20px;
+            border: none;
+            margin-left: 10px;
+            float: right;
+        }
+        .icon{
+            color: #fff;
+        }
+    }
+}
