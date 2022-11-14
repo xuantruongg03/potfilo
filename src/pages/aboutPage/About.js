@@ -1,9 +1,12 @@
 import {
+  faArrowLeft,
+  faArrowRight,
   faBriefcase,
   faCloudArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
+import { useState } from "react";
 import style from "./About.module.scss";
 
 const info = [
@@ -77,10 +80,15 @@ const Skills = [
 ];
 
 function About() {
+  const downloadCV = () => {
+    window.open(
+      "https://drive.google.com/file/d/11IuH7Zu9Hz7SMvzmALAx-JYDYD4Vkamo/view?usp=sharing"
+    );
+  };
 
-    const downloadCV = () => {
-        window.open("https://drive.google.com/file/d/11IuH7Zu9Hz7SMvzmALAx-JYDYD4Vkamo/view?usp=sharing");
-    }
+  const [isLeft, setIsLeft] = useState(true);
+
+  const hanldeChangeView = () => setIsLeft(!isLeft);
 
   return (
     <div className={style.container}>
@@ -91,57 +99,73 @@ function About() {
             ABOUT <span className={style.span}>ME</span>
           </h1>
         </div>
-        <div>
-          <div className={style.sub}>
-            <h2 className={style.subTitle}>PERSONAL INFOS</h2>
-            <h2 className={style.subTitle}>EXPERIENCE</h2>
-          </div>
-          <div className={style.containerInfo}>
-            <ul className={clsx(style.infoLeft)}>
-              {info.map((item) => (
-                <li>
-                  <span className={style.lable}>{item.lable}: </span>
-                  <span className={style.content}> {item.value} </span>
-                </li>
-              ))}
-              <div className={style.downloadCV}>
-                <div className={style.boxDownloadCV} onClick = {downloadCV}>
-                  <FontAwesomeIcon
-                    icon={faCloudArrowDown}
-                    className={style.downloadCVIcon}
-                  />
-                </div>
-                <h4 className={style.lableDownloadCV}>Download My CV</h4>
+        {isLeft ? (
+          <div>
+            <div>
+              <div className={style.sub}>
+                <h2 className={style.subTitle}>PERSONAL INFOS</h2>
+                <h2 className={style.subTitle}>EXPERIENCE</h2>
               </div>
-            </ul>
-            <div className={style.exp}>
-              {Experience.map((item) => (
-                <div className={style.expItem}>
-                  <div className={style.boxIcon}>
-                    <FontAwesomeIcon
-                      icon={faBriefcase}
-                      className={style.icon}
-                    />
+              <div className={style.containerInfo}>
+                <ul className={clsx(style.infoLeft)}>
+                  {info.map((item) => (
+                    <li>
+                      <span className={style.lable}>{item.lable}: </span>
+                      <span className={style.content}> {item.value} </span>
+                    </li>
+                  ))}
+                  <div className={style.downloadCV}>
+                    <div className={style.boxDownloadCV} onClick={downloadCV}>
+                      <FontAwesomeIcon
+                        icon={faCloudArrowDown}
+                        className={style.downloadCVIcon}
+                      />
+                    </div>
+                    <h4 className={style.lableDownloadCV}>Download My CV</h4>
                   </div>
-                  <div className={style.boxContentExp}>
-                    <div className={style.timeExp}> {item.time} </div>
-                    <h4 className={style.placeExp}> {item.place} </h4>
-                  </div>
+                </ul>
+                <div className={style.exp}>
+                  {Experience.map((item) => (
+                    <div className={style.expItem}>
+                      <div className={style.boxIcon}>
+                        <FontAwesomeIcon
+                          icon={faBriefcase}
+                          className={style.icon}
+                        />
+                      </div>
+                      <div className={style.boxContentExp}>
+                        <div className={style.timeExp}> {item.time} </div>
+                        <h4 className={style.placeExp}> {item.place} </h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <h2 className={style.subTitle2}>SKILLS</h2>
+            <div className={style.containerSkills}>
+              {Skills.map((item) => (
+                <div className={style.boxSkills}>
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className={style.skill}
+                  />
+                  <label className={style.nameSkill}>{item.name}</label>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </div>
-      <div className={style.box}>
-        <h2 className={style.subTitle2}>SKILLS</h2>
-        <div className={style.containerSkills}>
-          {Skills.map((item) => (
-            <div className={style.boxSkills}>
-              <img src={item.icon} alt={item.name} className={style.skill} />
-              <label className={style.nameSkill}>{item.name}</label>
-            </div>
-          ))}
+        )}
+
+        <div className={style.boxNext} onClick={hanldeChangeView}>
+          <FontAwesomeIcon
+            icon={isLeft ? faArrowRight : faArrowLeft}
+            className={style.iconNext}
+          />
         </div>
       </div>
     </div>

@@ -19,7 +19,6 @@ body {
   --dark-text-job-color: #f8c651;
   --dark-text-intro-color: rgb(240, 236, 236);
 
-  --shadow-style: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   font-family: "roboto", sans-serif;
 }
 

@@ -34,11 +34,10 @@ function Menu() {
           </div>
         ))}
         <div className={style.boxIconMenu} onClick={handleChangeTheme}>
-          {isDark ? (
-            <FontAwesomeIcon icon={faMoon} className={style.iconMenu} />
-          ) : (
-            <FontAwesomeIcon icon={faSun} className={style.iconMenu} />
-          )}
+          <FontAwesomeIcon
+            icon={isDark ? faMoon : faSun}
+            className={style.iconMenu}
+          />
         </div>
       </div>
     </div>

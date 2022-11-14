@@ -6,45 +6,47 @@
     height: 100vh;
 }
 
-.titleBackground {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    line-height: 250px;
-    font-size: 110px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgb(227, 224, 224);
-    letter-spacing: 20px;
-    opacity: 0.5;
-}
+.boxTitle {
+    .titleBackground {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        line-height: 250px;
+        font-size: 110px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgb(227, 224, 224);
+        letter-spacing: 20px;
+        opacity: 0.5;
+    }
 
-.title {
-    font-size: 60px;
-    font-weight: 800;
-    color: gray;
-    position: absolute;
-    top: 12%;
-    left: 39%;
-    letter-spacing: 3px;
-    opacity: 1 !important;
-}
+    .title {
+        font-size: 60px;
+        font-weight: 800;
+        color: gray;
+        position: absolute;
+        top: 12%;
+        left: 39%;
+        letter-spacing: 3px;
+        opacity: 1 !important;
 
-.span {
-    color: var(--light-text-name-color);
+        .span {
+            color: var(--light-text-name-color);
+        }
+    }
 }
 
 .sub {
     display: flex;
     justify-content: space-around;
-}
-
-.subTitle {
-    font-size: 30px;
-    color: var(--light-text-intro-color);
-    margin: 25px 0;
-    color: #666666;
+    
+    .subTitle {
+        font-size: 30px;
+        color: var(--light-text-intro-color);
+        margin: 25px 0;
+        color: #666666;
+    }
 }
 
 .containerInfo {
@@ -89,7 +91,7 @@ ul li {
         width: 50px;
         border-radius: 50%;
         position: relative;
-        
+
         .downloadCVIcon {
             color: #fff;
             position: absolute;
@@ -97,12 +99,13 @@ ul li {
             top: 30%;
         }
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             transform: scale(1.1);
             transition: all 0.2s ease;
         }
     }
+
     .lableDownloadCV {
         font-size: 20px;
         font-weight: 600;
@@ -116,7 +119,8 @@ ul li {
     width: 65%;
 }
 
-.boxIcon {
+.boxIcon,
+.boxNext {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,21 +144,39 @@ ul li {
     display: flex;
     align-items: center;
     margin: 0 0 40px 0;
+    
+    .timeExp {
+        background-color: rgb(97, 96, 96);
+        width: 120px;
+        border-radius: 7px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .placeExp {
+        text-transform: uppercase;
+        color: #666666;
+    }
 }
 
-.timeExp {
-    background-color: rgb(97, 96, 96);
-    width: 120px;
-    border-radius: 7px;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    margin: 5px 0;
-}
+.boxNext {
+    background-color: #fff;
+    border: 1px solid #72b626;
+    margin: 10px auto;
+    position: absolute;
+    top: 90%;
+    left: 48%;
 
-.placeExp {
-    text-transform: uppercase;
-    color: #666666;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+    }
+
+    .iconNext {
+        color: rgb(97, 96, 96);
+    }
 }
 
 .subTitle2 {
@@ -167,48 +189,47 @@ ul li {
 .containerSkills {
     display: flex;
     flex-wrap: wrap;
-}
-
-.boxSkills {
-    margin: 40px;
-    background-color: black;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    position: relative;
-    padding: 50px;
-
-    &:hover {
-        transform: scale(1.1);
-        transition: all 0.2s ease-in-out;
-
+    
+    .boxSkills {
+        margin: 40px;
+        background-color: black;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        position: relative;
+    
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+    
+            .nameSkill {
+                opacity: 1;
+            }
+        }
+        
+        .skill {
+            height: 60%;
+            width: 65%;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+        }
+        
         .nameSkill {
-            opacity: 1;
+            // at the after
+            position: absolute;
+            bottom: -70px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: rgb(159, 154, 154);
+            font-weight: 700;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
         }
     }
-}
-
-.skill {
-    height: 60%;
-    width: 65%;
-    position: absolute;
-    top: 25px;
-    left: 20px;
-}
-
-.nameSkill {
-    // at the after
-    position: absolute;
-    bottom: -70px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: rgb(159, 154, 154);
-    font-weight: 700;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
 }
