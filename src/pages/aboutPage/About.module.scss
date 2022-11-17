@@ -54,6 +54,7 @@ ul li {
     margin-top: 30px;
     margin-left: 50px;
     width: 35%;
+    text-decoration: none;
 
     .boxDownloadCV {
         background-color: #7BDB6B;
@@ -136,7 +137,7 @@ ul li {
     border: 1px solid #7BDB6B;
     margin: 10px auto;
     position: absolute;
-    top: 90%;
+    bottom: 3%;
     left: 48%;
 
     &:hover {

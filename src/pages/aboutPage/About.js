@@ -102,8 +102,8 @@ function About() {
               </div>
               <div className={style.containerInfo}>
                 <ul className={clsx(style.infoLeft)}>
-                  {info.map((item) => (
-                    <li>
+                  {info.map((item, index) => (
+                    <li key={index}>
                       <span className={style.lable}>{item.lable}: </span>
                       <span className={style.content}> {item.value} </span>
                     </li>
@@ -119,8 +119,8 @@ function About() {
                   </a>
                 </ul>
                 <div className={style.exp}>
-                  {Experience.map((item) => (
-                    <div className={style.expItem}>
+                  {Experience.map((item, index) => (
+                    <div className={style.expItem} key={index}>
                       <div className={style.boxIcon}>
                         <FontAwesomeIcon
                           icon={faBriefcase}

@@ -10,7 +10,7 @@
         width: 50%;
         margin-right: 10px;
 
-        .mail{
+        .mail {
             width: 70%;
             margin-left: 50px;
             // height: 200px;
@@ -21,8 +21,18 @@
         margin-left: 10px;
         width: 50%;
 
+        .groupParent {
+            display: flex;
+
+            .group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
         .yourInfo {
-            width: 46%;
+            // width: 46%;
             margin: 10px;
             height: 50px;
             border-radius: 30px;
@@ -30,31 +40,40 @@
             padding-left: 30px;
             background-color: #EEEEEE;
             border: none;
-            &:focus{
-                outline: 0.5px solid #72b626 ;
+
+            &:focus {
+                outline: 0.5px solid #72b626;
             }
         }
 
-        .subject{
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+        .subject {
             width: 96%;
             margin: 10px;
         }
 
         .textArea {
-            width: 96%;
-            height: 200px;
+            min-width: 96%;
+            max-width: 96%;
+            min-height: 200px;
             border-radius: 30px;
             background-color: #EEEEEE;
             margin: 10px;
             border: none;
             padding: 10px;
             padding-left: 30px;
-            &:focus{
-                outline: 0.5px solid #72b626 ;
+
+            &:focus {
+                outline: 0.5px solid #72b626;
             }
         }
 
-        .button{
+        .button {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -72,7 +91,8 @@
             margin-left: 10px;
             float: right;
         }
-        .icon{
+
+        .icon {
             color: #fff;
         }
     }

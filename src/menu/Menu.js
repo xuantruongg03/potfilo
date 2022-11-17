@@ -4,23 +4,30 @@ import {
   faHome,
   faMoon,
   faSun,
-  faUser,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import style from "./Menu.module.scss";
 
 function Menu() {
-  const [isDark, setIsDark] = useState(true);
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.NotificationReducer);
 
   //đổi màu nền
-  const handleChangeTheme = () => setIsDark(!isDark);
+  const handleChangeTheme = () => 
+  {
+    dispatch({
+      type: 'CHANGE_THEME',
+      // data: isDark,
+    })
+  };
 
   const iconMenu = [
     { link: "/", icon: faHome, name: "Home" },
-    { link: "/project", icon: faBriefcase, name: "Project" },
     { link: "/about", icon: faUser, name: "About" },
+    { link: "/project", icon: faBriefcase, name: "Project" },
     { link: "/contact", icon: faEnvelope, name: "Contact" },
   ];
   return (
@@ -35,7 +42,7 @@ function Menu() {
         ))}
         <div className={style.boxIconMenu} onClick={handleChangeTheme}>
           <FontAwesomeIcon
-            icon={isDark ? faMoon : faSun}
+            icon={state ? faSun : faMoon}
             className={style.iconMenu}
           />
         </div>
