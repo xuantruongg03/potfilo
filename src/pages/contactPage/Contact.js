@@ -33,6 +33,7 @@ function Contact() {
   };
 
   const form = useRef();
+  const playerRef = useRef();
 
   const handleSubmit = (e) => {
     //send email
@@ -45,32 +46,31 @@ function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result.status);
         },
         (error) => {
           console.log(error.text);
         }
       );
-      
-      console.log(isSend);
-      
-      setTimeout(() => {
-          setIsSend(false);
-        }, 2300);
-        clearTimeout();
-        
+    playerRef.current.play();
+    setIsSend(true);
+
+    setTimeout(() => {
+      setIsSend(false);
+      playerRef.current.stop();
+    }, 4000);
+    clearTimeout();
+
     e.preventDefault();
   };
-  setIsSend(true);
-  
-  
+
   return (
     <div className={style.container}>
       <Title data={data} />
       <div className={isSend ? style.popup : style.disable}>
         <div className={style.popup__content}>
           <Player
-            autoplay = {isSend ? true : false}
+            ref={playerRef}
             loop
             src={require("../../assets/json/send-success.json")}
             style={{ height: "500px", width: "500px" }}
