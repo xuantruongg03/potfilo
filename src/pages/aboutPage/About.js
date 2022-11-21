@@ -94,7 +94,7 @@ function About() {
       <div className={style.box}>
         <Title data = {data}/>
         {isLeft ? (
-          <div>
+          <div className={style.boxInfo}>
             <div>
               <div className={style.sub}>
                 <h2 className={style.subTitle}>PERSONAL INFOS</h2>
@@ -138,7 +138,7 @@ function About() {
             </div>
           </div>
         ) : (
-          <div>
+          <div className={style.boxSkill}>
             <h2 className={style.subTitle2}>SKILLS</h2>
             <div className={style.containerSkills}>
               {Skills.map((item) => (

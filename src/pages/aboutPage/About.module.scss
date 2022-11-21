@@ -6,6 +6,38 @@
     height: 100vh;
 }
 
+.boxInfo{
+    animation: slider;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+
+
+    @keyframes slider {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+.boxSkill{
+    animation: sliderSkill;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+
+
+    @keyframes sliderSkill {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
 .sub {
     display: flex;
     justify-content: space-around;
@@ -16,6 +48,8 @@
         margin: 25px 0;
         color: #666666;
     }
+
+    
 }
 
 .containerInfo {

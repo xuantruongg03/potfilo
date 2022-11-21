@@ -20,7 +20,6 @@ function Menu() {
   {
     dispatch({
       type: 'CHANGE_THEME',
-      // data: isDark,
     })
   };
 

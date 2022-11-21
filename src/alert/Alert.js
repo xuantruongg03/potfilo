@@ -16,8 +16,9 @@ function Alert() {
     })
   };
 
+
   return (
-    <div className={clsx(style.toastContainer, state ? "active" : "")}>
+    <div className={clsx(state ? style.toastContainer : style.container)}>
       <div className={clsx(style.toast, style.toastYellow, style.addMargin)}>
         <FontAwesomeIcon icon={faWarning} className={style.toastIcon} />
         <div className={style.toastContent}>
@@ -27,9 +28,7 @@ function Alert() {
         <div className={style.toastClose} onClick={handleClose}>
           <svg
             version="1.1"
-            // xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 15.642 15.642"
-            // xmlns:xlink="http://www.w3.org/1999/xlink"
             enableBackground="new 0 0 15.642 15.642"
           >
             <path

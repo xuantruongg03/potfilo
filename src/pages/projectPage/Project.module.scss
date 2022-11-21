@@ -8,6 +8,22 @@
     justify-content: center;
     margin: 40px 0;
 
+    animation-name: slideOutType;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    @keyframes slideOutType {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }
+
     .type {
         width: 80px;
         height: 30px;
@@ -39,9 +55,24 @@
 }
 
 .boxProject {
-    // margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    animation-name: slideOutProject;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    @keyframes slideOutProject {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
 
     .project {
         height: 230px;
@@ -113,7 +144,7 @@
         border-radius: 10px;
     }
 
-    .imgSub{
+    .imgSub {
         width: 100px;
         height: 70px;
         object-fit: cover;
@@ -151,14 +182,14 @@
         color: #F7F7F7;
     }
 
-    .linkDemo{
+    .linkDemo {
         font-size: 16px;
         margin: 20px 0;
         color: #6D9886;
         text-decoration: none;
         font-weight: 700;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* Scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   /* light theme */
   --light-color: #7BDB6B;
@@ -20,8 +25,4 @@ body {
   --dark-text-intro-color: rgb(240, 236, 236);
 
   font-family: "roboto", sans-serif;
-}
-
-.active{
-  visibility: visible !important;
 }

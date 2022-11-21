@@ -1,11 +1,11 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
-import image from "../../assets/images/mail.webp";
 import Title from "../../title/Title";
 import style from "./Contact.module.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const data = { background: "Contact", title: "Contact Me" };
 
@@ -14,6 +14,7 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
+  const [isSend, setIsSend] = useState(false);
 
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -50,15 +51,41 @@ function Contact() {
           console.log(error.text);
         }
       );
+      
+      console.log(isSend);
+      
+      setTimeout(() => {
+          setIsSend(false);
+        }, 2300);
+        clearTimeout();
+        
+    e.preventDefault();
   };
-
+  setIsSend(true);
+  
+  
   return (
     <div className={style.container}>
       <Title data={data} />
+      <div className={isSend ? style.popup : style.disable}>
+        <div className={style.popup__content}>
+          <Player
+            autoplay = {isSend ? true : false}
+            loop
+            src={require("../../assets/json/send-success.json")}
+            style={{ height: "500px", width: "500px" }}
+          ></Player>
+        </div>
+      </div>
       <br />
       <div className={style.contact}>
         <div className={style.image}>
-          <img src={image} alt="mail" border="0" className={style.mail} />
+          <Player
+            autoplay
+            loop
+            src={require("../../assets/json/mail.json")}
+            className={style.mail}
+          ></Player>
         </div>
         <form ref={form} className={style.form} onSubmit={handleSubmit}>
           <div className={style.groupParent}>
@@ -114,7 +141,7 @@ function Contact() {
           {message === "" ? (
             <label className={style.error}>This is required</label>
           ) : null}
-          <button className={style.button} onClick={handleSubmit} type ="submit">
+          <button className={style.button} onClick={handleSubmit} type="submit">
             <FontAwesomeIcon icon={faPaperPlane} className={style.icon} />
           </button>
         </form>
