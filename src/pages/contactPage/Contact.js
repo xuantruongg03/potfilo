@@ -33,118 +33,122 @@ function Contact() {
   };
 
   const form = useRef();
-  const playerRef = useRef();
+  const sendRef = useRef();
 
   const handleSubmit = (e) => {
-    //send email
-    emailjs
-      .sendForm(
-        "service_521tord",
-        "template_xoqablr",
-        form.current,
-        "fz9bZCXPzXILDAPZ-"
-      )
-      .then(
-        (result) => {
-          console.log(result.status);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    playerRef.current.play();
-    setIsSend(true);
+    if (name !== "" && email !== "" && message !== "" && subject !== "") {
+      emailjs
+        .sendForm(
+          "service_521tord",
+          "template_xoqablr",
+          form.current,
+          "kUl-p8IOnFqcIBllZ"
+        )
+        .then(
+          (result) => {
+            if (result.status === 200) {
+              setIsSend(true);
+              sendRef.current.play();
+            }
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
 
-    setTimeout(() => {
-      setIsSend(false);
-      playerRef.current.stop();
-    }, 4000);
-    clearTimeout();
-
+      setTimeout(() => {
+        setIsSend(false);
+        sendRef.current.stop();
+      }, 5000);
+      clearTimeout();
+    }
     e.preventDefault();
   };
 
   return (
-    <div className={style.container}>
-      <Title data={data} />
-      <div className={isSend ? style.popup : style.disable}>
-        <div className={style.popup__content}>
-          <Player
-            ref={playerRef}
-            loop
-            src={require("../../assets/json/send-success.json")}
-            style={{ height: "500px", width: "500px" }}
-          ></Player>
+    <div>
+      <div className={style.container}>
+        <Title data={data} />
+        <div className={isSend ? style.popup : style.disable}>
+          <div className={style.popup__content}>
+            <Player
+              ref={sendRef}
+              loop
+              src={require("../../assets/json/send-success.json")}
+              style={{ height: "500px", width: "500px" }}
+            ></Player>
+          </div>
         </div>
-      </div>
-      <br />
-      <div className={style.contact}>
-        <div className={style.image}>
-          <Player
-            autoplay
-            loop
-            src={require("../../assets/json/mail.json")}
-            className={style.mail}
-          ></Player>
-        </div>
-        <form ref={form} className={style.form} onSubmit={handleSubmit}>
-          <div className={style.groupParent}>
-            <div className={style.group}>
+        <br />
+        <div className={style.contact}>
+          <div className={style.image}>
+            <Player
+              autoplay
+              loop
+              src={require("../../assets/json/mail.json")}
+              className={style.mail}
+            ></Player>
+          </div>
+          <form ref={form} className={style.form} onSubmit={handleSubmit}>
+            <div className={style.groupParent}>
+              <div className={style.group}>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className={style.yourInfo}
+                  onChange={handleInputName}
+                  name="name"
+                />
+                {name === "" ? (
+                  <label className={style.error}>This is required</label>
+                ) : null}
+              </div>
+              <div className={style.group}>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className={style.yourInfo}
+                  onChange={handleInputEmail}
+                  name="email"
+                />
+                {email === "" ? (
+                  <label className={style.error}>This is required</label>
+                ) : null}
+              </div>
+            </div>
+            <div>
               <input
                 type="text"
-                placeholder="Name"
-                className={style.yourInfo}
-                onChange={handleInputName}
-                name="name"
+                placeholder="Subject"
+                className={clsx(style.yourInfo, style.subject)}
+                onChange={handleInputSubject}
+                name="subject"
               />
-              {name === "" ? (
+              {subject === "" ? (
                 <label className={style.error}>This is required</label>
               ) : null}
             </div>
-            <div className={style.group}>
-              <input
-                type="email"
-                placeholder="Email"
-                className={style.yourInfo}
-                onChange={handleInputEmail}
-                name="email"
-              />
-              {email === "" ? (
-                <label className={style.error}>This is required</label>
-              ) : null}
-              {/* {email.includes("@") ? null : (
-                <label className={style.error}>Invalid email</label>
-              )} */}
-            </div>
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className={clsx(style.yourInfo, style.subject)}
-              onChange={handleInputSubject}
-              name="subject"
-            />
-            {subject === "" ? (
+            <textarea
+              placeholder="Message"
+              id="txtArea"
+              rows="10"
+              cols="70"
+              className={style.textArea}
+              onChange={handleInputMessage}
+              name="message"
+            ></textarea>
+            {message === "" ? (
               <label className={style.error}>This is required</label>
             ) : null}
-          </div>
-          <textarea
-            placeholder="Message"
-            id="txtArea"
-            rows="10"
-            cols="70"
-            className={style.textArea}
-            onChange={handleInputMessage}
-            name="message"
-          ></textarea>
-          {message === "" ? (
-            <label className={style.error}>This is required</label>
-          ) : null}
-          <button className={style.button} onClick={handleSubmit} type="submit">
-            <FontAwesomeIcon icon={faPaperPlane} className={style.icon} />
-          </button>
-        </form>
+            <button
+              className={style.button}
+              onClick={handleSubmit}
+              type="submit"
+            >
+              <FontAwesomeIcon icon={faPaperPlane} className={style.icon} />
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
