@@ -37,7 +37,7 @@ const project = [
     created: "2022",
     frontEnd: "VueJS",
     backEnd: "",
-    demo: "",
+    demo: "https://xt-tip-calculator-app.netlify.app/",
     role: "Web",
   },
 ];
