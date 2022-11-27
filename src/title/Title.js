@@ -5,7 +5,9 @@ function Title(props) {
 
     return ( 
         <div className={style.boxTitle}>
-          <div className={style.titleBackground}>{props.data.background}</div>
+          <div className={style.titleBackground}>
+            {props.data.background}
+            </div>
           <h1 className={style.title}>
             {title[0]} <span className={style.span}>{title[1]}</span>
           </h1>

@@ -1,8 +1,9 @@
 .boxTitle {
     text-transform: uppercase;
-    margin: 0 150px;
+    // margin: 0 150px;
     .titleBackground {
         position: relative;
+        
         width: 100%;
         height: 180px;
         text-align: center;
@@ -30,5 +31,67 @@
         .span {
             color: #7BDB6B;
         }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .title{
+        display: none;
+    }
+
+    .titleBackground{
+        line-height: 150px;
+        color: #7BDB6B !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .titleBackground{
+        font-size: 90px !important;
+        line-height: 150px;
+        color: #7BDB6B !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .titleBackground{
+        font-size: 80px !important;
+        line-height: 150px;
+        color: #7BDB6B !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .titleBackground{
+        font-size: 65px !important;
+        line-height: 150px;
+        color: #7BDB6B !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .titleBackground{
+        font-size: 50px !important;
+        color: #7BDB6B !important;
+        letter-spacing: 20px !important;
+        line-height: 150px !important;
+        height: 120px !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
     }
 }

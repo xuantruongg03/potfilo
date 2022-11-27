@@ -25,4 +25,6 @@ body {
   --dark-text-intro-color: rgb(240, 236, 236);
 
   font-family: "roboto", sans-serif;
+
+  min-height: 100vh;
 }

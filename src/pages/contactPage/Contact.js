@@ -36,7 +36,9 @@ function Contact() {
   const sendRef = useRef();
 
   const handleSubmit = (e) => {
-    if (name !== "" && email !== "" && message !== "" && subject !== "") {
+    if (name !== "" && email !== "" && message !== "" && subject !== "" ) {
+      setIsSend(true);
+      sendRef.current.play();
       emailjs
         .sendForm(
           "service_521tord",
@@ -47,8 +49,8 @@ function Contact() {
         .then(
           (result) => {
             if (result.status === 200) {
-              setIsSend(true);
-              sendRef.current.play();
+              // setIsSend(true);
+              // sendRef.current.play();
             }
           },
           (error) => {
@@ -59,7 +61,7 @@ function Contact() {
       setTimeout(() => {
         setIsSend(false);
         sendRef.current.stop();
-      }, 5000);
+      }, 4000);
       clearTimeout();
     }
     e.preventDefault();
@@ -72,6 +74,7 @@ function Contact() {
         <div className={isSend ? style.popup : style.disable}>
           <div className={style.popup__content}>
             <Player
+              className={style.send}
               ref={sendRef}
               loop
               src={require("../../assets/json/send-success.json")}
@@ -98,6 +101,7 @@ function Contact() {
                   className={style.yourInfo}
                   onChange={handleInputName}
                   name="name"
+                  style={{marginRight: "10px"}}
                 />
                 {name === "" ? (
                   <label className={style.error}>This is required</label>
@@ -110,6 +114,7 @@ function Contact() {
                   className={style.yourInfo}
                   onChange={handleInputEmail}
                   name="email"
+                  style={{marginLeft: "10px"}}
                 />
                 {email === "" ? (
                   <label className={style.error}>This is required</label>

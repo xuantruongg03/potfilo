@@ -7,23 +7,7 @@
     text-align: center;
     justify-content: center;
     margin: 40px 0;
-
-    animation-name: slideOutType;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out;
-    @keyframes slideOutType {
-        0% {
-            opacity: 0;
-            transform: translateX(100%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-    }
-
+    
     .type {
         width: 80px;
         height: 30px;
@@ -46,7 +30,50 @@
             background-color: #7BDB6B;
             color: #fff;
         }
+
+        animation-name: slideOutType;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-out;
+
+        animation-fill-mode: forwards;
+
+        @keyframes slideOutType {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+        }
+
+        visibility: hidden;
+
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 0.5s;
+        }
     }
+
 
     .active {
         background-color: #7BDB6B;
@@ -58,21 +85,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    animation-name: slideOutProject;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-in-out;
-    @keyframes slideOutProject {
-        0% {
-            opacity: 0;
-            transform: translateY(50%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    }
 
     .project {
         height: 230px;
@@ -93,12 +105,29 @@
                 opacity: 0.7;
             }
         }
+
+        animation-name: slideOutProject;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+        @keyframes slideOutProject {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
     }
 }
 
 .popup {
-    position: absolute;
-    top: 25%;
+    position: fixed;
+    top: 23%;
     left: 15%;
     width: 70%;
     height: 60%;
@@ -197,4 +226,250 @@
 
 .active {
     visibility: visible;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .boxProject {
+        height: 100vh;
+    }
+
+    .popup {
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .boxProject {
+        height: 100vh;
+        justify-content: space-around !important;
+
+    }
+
+    .project {
+        width: 100% !important;
+        height: 300px !important;
+        margin: 20px auto !important;
+    }
+
+    .popup {
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .type {
+        font-size: 12px !important;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        margin: 0 50px;
+    }
+
+    .boxType {
+        flex-wrap: wrap;
+    }
+
+    .type {
+        margin: 10px !important;
+    }
+
+    .popup {
+        width: 90%;
+        left: 5%;
+        top: 25%;
+        height: 50%;
+
+        .nameProject {
+            font-size: 25px !important;
+        }
+
+        .labelInfoProject {
+            font-size: 14px !important;
+        }
+
+        .desProject,
+        .linkDemo {
+            font-size: 14px !important;
+        }
+
+        .imageInPopup {
+            height: 50% !important;
+            width: 80% !important;
+            top: 30% !important;
+            left: 10% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .boxProject {
+        height: 100vh;
+        justify-content: space-around !important;
+
+    }
+
+    .project {
+        width: 70% !important;
+        height: 300px !important;
+        margin: 20px auto !important;
+    }
+
+    .popup {
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .boxProject {
+        height: 100vh;
+        justify-content: space-around !important;
+
+    }
+
+    .project {
+        width: 70% !important;
+        height: 300px !important;
+        margin: 20px auto !important;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+    .boxType {
+        flex-wrap: wrap;
+    }
+
+    .type {
+        margin: 10px !important;
+    }
+
+    .popup {
+        width: 95%;
+        left: 2%;
+        top: 27%;
+        height: 50%;
+
+        .nameProject {
+            font-size: 20px !important;
+        }
+
+        .labelInfoProject {
+            font-size: 12px !important;
+        }
+
+        .desProject,
+        .linkDemo {
+            font-size: 12px !important;
+        }
+
+        .imageInPopup {
+            height: 50% !important;
+            width: 80% !important;
+            top: 30% !important;
+            left: 10% !important;
+        }
+
+        .boxIcon {
+            height: 40px !important;
+            width: 40px !important;
+            top: -15px !important;
+            right: -15px !important;
+
+            .icon {
+                font-size: 20px !important;
+                top: 25%;
+                left: 35%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .boxProject {
+        height: 150vh !important;
+        justify-content: space-around !important;
+
+    }
+
+    .project {
+        width: 90% !important;
+        height: 250px !important;
+        margin-top: 0 !important;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+    .boxType {
+        flex-wrap: wrap;
+        margin-top: 5px !important;
+    }
+
+    .type {
+        padding: 20px !important;
+        width: 150px !important;
+        font-size: 14px !important;
+    }
+
+    .popup {
+        width: 95% !important;
+        left:2.5%;
+        top: 20%;
+        height: 55% !important;
+
+        .infoPopup{
+            width: 100%;
+            margin: 0 10px !important;
+        }
+
+        .nameProject {
+            font-size: 25px !important;
+            font-weight: 600;
+        }
+
+        .labelInfoProject {
+            font-size: 12px !important;
+        }
+
+        .desProject,
+        .linkDemo {
+            font-size: 15px !important;
+        }
+
+        .imgPopup {
+            display: none !important;
+        }
+
+        .boxIcon {
+            height: 40px !important;
+            width: 40px !important;
+            top: -15px !important;
+            right: -15px !important;
+
+            .icon {
+                font-size: 20px !important;
+                top: 25%;
+                left: 35%;
+            }
+        }
+    }
 }

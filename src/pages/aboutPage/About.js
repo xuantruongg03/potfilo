@@ -36,6 +36,10 @@ const info = [
     lable: "Facebook",
     value: "facebook.com/xuan.truong.03",
   },
+  {
+    lable: "Github",
+    value: "github.com/xuantruongg03",
+  }
 ];
 
 const Experience = [
@@ -75,10 +79,7 @@ const Skills = [
     icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
   },
   { name: "SQL", icon: "https://img.icons8.com/color/48/000000/sql.png" },
-  {
-    name: "Python",
-    icon: "https://img.icons8.com/color/48/000000/python--v1.png",
-  },
+  
 ];
 
 function About() {

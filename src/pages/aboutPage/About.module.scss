@@ -89,6 +89,7 @@ ul li {
     margin-left: 50px;
     width: 35%;
     text-decoration: none;
+    justify-content: space-between;
 
     .boxDownloadCV {
         background-color: #7BDB6B;
@@ -167,12 +168,13 @@ ul li {
 }
 
 .boxNext {
+    position: fixed;
+    top: 90%;
+    left: 0;
+    right: 0;
     background-color: #fff;
     border: 1px solid #7BDB6B;
     margin: 10px auto;
-    position: absolute;
-    bottom: 3%;
-    left: 48%;
 
     &:hover {
         transform: scale(1.1);
@@ -237,4 +239,213 @@ ul li {
             transition: all 0.2s ease-in-out;
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .downloadCV{
+        width: 43%;
+    }
+
+    .container{
+        margin: 0 70px;
+        // height: 120vh !important;
+    }
+
+    .boxSkills{
+        margin: 20px !important;
+    }
+    .boxNext{
+        top: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    
+        .container{
+            margin: 0 20px;
+            // height: 110vh !important;
+        }
+    
+        .boxSkills{
+            margin: 20px !important;
+        }
+
+        // .boxNext{
+        //     position: absolute;
+        //     top: 80%;
+        //     left: 0;
+        //     right: 0;
+        // }
+}
+
+@media screen and (max-width: 750px) {
+    
+    .container{
+        margin: 0 10px;
+        // height: 110vh !important;
+    }
+
+    .boxSkills{
+        margin: 20px !important;
+    }
+
+    .downloadCV{
+        width: 55%;
+    }
+
+    .lableDownloadCV{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+    .boxNext{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+    .container{
+        margin: 0;
+    }
+
+    .boxSkills{
+        margin: 20px !important;
+    }
+
+    .downloadCV{
+        width: 55%;
+        margin-left: 20px;
+    }
+
+    .lableDownloadCV{
+        font-size: 17px !important;
+    }
+
+    .sub{
+        justify-content: space-between;
+        margin: 0 20px 0 20px;
+    }
+
+    .infoLeft li {
+        margin-left: 20px;
+    }
+
+    .expItem{
+        margin-left: 30px;
+    }
+
+    .containerSkills{
+        margin-left: 40px !important;
+        min-height: 50vh;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    
+    .lable, .content{
+        font-size: 14px !important;
+    }
+
+    .subTitle {
+        margin-bottom: 10px !important;
+    }
+
+    .expItem{
+        margin: 20px 0 !important;
+    }
+
+    .lableDownloadCV{
+        font-size: 14px !important;
+    }
+
+    .downloadCV{
+        width: 53%;
+    }
+
+    .boxDownloadCV{
+        width: 40px !important;       
+        height: 40px !important;
+    }
+
+    .downloadCVIcon{
+        font-size: 15px;
+    }
+
+    .boxIcon{
+        width: 40px !important;       
+        height: 40px !important;
+    }
+
+    .placeExp{
+        font-size: 14px !important;
+    }
+
+    .timeExp{
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .lable, .content{
+        font-size: 13px !important;
+    }
+
+    .subTitle {
+        margin-bottom: 5px !important;
+        font-size: 20px !important;
+    }
+
+    .expItem{
+        margin: 20px 0 !important;
+    }
+
+    .lableDownloadCV{
+        font-size: 14px !important;
+    }
+
+    .downloadCV{
+        width: 70%;
+        margin-left: 7px !important;
+    }
+
+    .boxDownloadCV{
+        width: 30px !important;       
+        height: 30px !important;
+    }
+
+    .downloadCVIcon{
+        font-size: 15px;
+        left: 21% !important;
+        top: 24% !important;
+    }
+
+    .boxIcon{
+        width: 30px !important;       
+        height: 30px !important;
+        margin-right: 5px !important;
+    }
+
+    .icon{
+        font-size: 15px !important;
+    }
+
+    .placeExp{
+        font-size: 13px !important;
+    }
+
+    .timeExp{
+        font-size: 11px !important;
+    }
+
+    .infoLeft li {
+        margin-left: 7px !important;
+    }
+
 }
