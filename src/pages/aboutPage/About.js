@@ -14,7 +14,7 @@ import cv from "../../assets/doc/Xuan-Truong.pdf";
 const info = [
   {
     lable: "Name",
-    value: "Lê Xuân Trường",
+    value: "Le Xuan Truong",
   },
   {
     lable: "Age",
@@ -39,12 +39,12 @@ const info = [
   {
     lable: "Github",
     value: "github.com/xuantruongg03",
-  }
+  },
 ];
 
 const Experience = [
   { time: "2021 - 2025", place: "Quy Nhon University" },
-  { time: "08/2022 - Now", place: "F8 Education" },
+  { time: "2022", place: "F8 Education" },
 ];
 
 const Skills = [
@@ -61,11 +61,9 @@ const Skills = [
     name: "ReactJS",
     icon: "https://img.icons8.com/color/48/000000/react-native.png",
   },
-  {
-    name: "GitHub",
-    icon: "https://img.icons8.com/fluent/48/000000/github.png",
+  { name: "SASS", 
+    icon: "https://img.icons8.com/color/48/000000/sass.png" 
   },
-  { name: "SASS", icon: "https://img.icons8.com/color/48/000000/sass.png" },
   {
     name: "Bootstrap",
     icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
@@ -78,22 +76,26 @@ const Skills = [
     name: "C++",
     icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
   },
-  { name: "SQL", icon: "https://img.icons8.com/color/48/000000/sql.png" },
-  
+  { name: "SQL", 
+    icon: "https://img.icons8.com/color/48/000000/sql.png" 
+  },
+  {
+    name: "GitHub",
+    icon: "https://img.icons8.com/fluent/48/000000/github.png",
+  },
 ];
 
 function About() {
-
   const [isLeft, setIsLeft] = useState(true);
 
   const hanldeChangeView = () => setIsLeft(!isLeft);
 
-  const data = {background: "About", title: "About Me"};
+  const data = { background: "About", title: "About Me" };
 
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <Title data = {data}/>
+        <Title data={data} />
         {isLeft ? (
           <div className={style.boxInfo}>
             <div>
