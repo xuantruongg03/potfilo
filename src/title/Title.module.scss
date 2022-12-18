@@ -95,3 +95,16 @@
         opacity: 1 !important;
     }
 }
+
+@media screen and (max-width: 320px) {
+
+    .titleBackground{
+        font-size: 40px !important;
+        color: #7BDB6B !important;
+        letter-spacing: 20px !important;
+        line-height: 150px !important;
+        height: 120px !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+}

@@ -68,7 +68,6 @@ function Contact() {
   };
 
   return (
-    <div>
       <div className={style.container}>
         <Title data={data} />
         <div className={isSend ? style.popup : style.disable}>
@@ -137,7 +136,7 @@ function Contact() {
               placeholder="Message"
               id="txtArea"
               rows="10"
-              cols="70"
+              cols="60"
               className={style.textArea}
               onChange={handleInputMessage}
               name="message"
@@ -155,7 +154,6 @@ function Contact() {
           </form>
         </div>
       </div>
-    </div>
   );
 }
 

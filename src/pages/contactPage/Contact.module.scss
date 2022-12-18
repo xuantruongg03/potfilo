@@ -1,7 +1,7 @@
 
 .container {
     margin: 0 200px;
-    min-height: 100vh;
+    height: fit-content;
 }
 
 .contact {
@@ -58,7 +58,8 @@
         .textArea {
             min-width: 100%;
             max-width: 100%;
-            min-height: 200px;
+            max-height: 170px;
+            min-height: 170px;
             border-radius: 30px;
             background-color: #EEEEEE;
             margin: 10px 0;
@@ -138,7 +139,6 @@
 @media screen and (max-width: 1000px) {
     .container{
         margin: 0 50px;
-        min-height: 115vh !important;
     }
 
     .mail {
@@ -181,7 +181,6 @@
 @media screen and (max-width: 650px) {
     .container{
         margin: 0 25px;
-        min-height: 100vh !important;
     }
     .contact{
         display: block;
@@ -210,7 +209,6 @@
 @media screen and (max-width: 480px) {
     .container{
         margin: 0 5px !important;
-        min-height: 105vh !important;
     }
     .groupParent{
         flex-direction: column !important;

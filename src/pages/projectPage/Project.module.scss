@@ -85,6 +85,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: fit-content;
 
     .project {
         height: 230px;
@@ -404,14 +405,14 @@
 
 @media screen and (max-width: 480px) {
     .boxProject {
-        height: 150vh !important;
+        height: fit-content;
         justify-content: space-around !important;
 
     }
 
     .project {
         width: 90% !important;
-        height: 250px !important;
+        height: 270px !important;
         margin-top: 0 !important;
     }
 

@@ -1,7 +1,7 @@
 .homePage {
     background-color: var(--light-background-color);
-    min-height: 80vh;
-    z-index: -9999;
+    min-height: fit-content;
+    // z-index: -9999;
 }
 
 .blockColor {
@@ -134,13 +134,7 @@
     }
 
     .intro {
-        font-size: 16px;
-        font-weight: 400;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 2px;
-        margin: 0;
-        line-height: 35px;
-        text-align: justify;
-        color: var(--light-text-intro-color);
+        font-size: 16px !important;
+        line-height: 30px !important;
     }
 }
