@@ -32,10 +32,10 @@ const Info = [
 const Projects = [
   {
     id: 1,
-    name: "Đồng hồ đếm ngược",
+    name: "Dong Ho Dem Nguoc",
     img: require("./assets/images/dong-ho.png"),
     created: "2022",
-    des: "Đây là sản phẩm đầu tiên. Sản phẩm được dùng để đếm ngược thời gian đã được định trước",
+    des: "This is the first product. The product is used to count down a predetermined time.",
     frontEnd: "HTML, CSS, JavaScript",
     backEnd: "",
     demo: "https://xuantruongg03.github.io/dong-ho/",
@@ -84,33 +84,40 @@ const Skills = [
   {
     name: "HTML",
     icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
+    reached: 90
   },
-  { name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png" },
+  { name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png", reached: 90 },
   {
     name: "JavaScript",
     icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
+    reached: 80
   },
   {
     name: "ReactJS",
     icon: "https://img.icons8.com/color/48/000000/react-native.png",
+    reached: 80
   },
-  { name: "SASS", icon: "https://img.icons8.com/color/48/000000/sass.png" },
+  { name: "SASS", icon: "https://img.icons8.com/color/48/000000/sass.png", reached: 70 },
   {
     name: "Bootstrap",
     icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+    reached: 70
   },
   {
     name: "Java",
     icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png",
+    reached: 80
   },
   {
     name: "C++",
     icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
+    reached: 80
   },
-  { name: "SQL", icon: "https://img.icons8.com/color/48/000000/sql.png" },
+  { name: "SQL", icon: "https://img.icons8.com/color/48/000000/sql.png", reached: 80 },
   {
     name: "GitHub",
     icon: "https://img.icons8.com/fluent/48/000000/github.png",
+    reached: 70
   },
 ];
 

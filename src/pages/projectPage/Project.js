@@ -75,11 +75,11 @@ function Project() {
             </div>
             <h3 className={style.nameProject}>{Projects[activePopUp].name}</h3>
             <p className={style.desProject}>
-              <span className={style.labelInfoProject}>Mô tả: </span>
+              <span className={style.labelInfoProject}>Description: </span>
               {Projects[activePopUp].des}
             </p>
             <p className={style.desProject}>
-              <span className={style.labelInfoProject}>Ngày tạo: </span>{" "}
+              <span className={style.labelInfoProject}>Created: </span>{" "}
               {Projects[activePopUp].created}
             </p>
             <p className={style.desProject}>

@@ -2,16 +2,16 @@ import {
   faArrowLeft,
   faArrowRight,
   faBriefcase,
-  faCloudArrowDown
+  faCloudArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { useState } from "react";
+import styled, { keyframes } from "styled-components";
 import cv from "../../assets/doc/Xuan-Truong.pdf";
 import { Experiences, Info, Skills } from "../../data";
 import Title from "../../title/Title";
 import style from "./About.module.scss";
-
 
 function About() {
   const [isLeft, setIsLeft] = useState(true);
@@ -19,6 +19,22 @@ function About() {
   const hanldeChangeView = () => setIsLeft(!isLeft);
 
   const data = { background: "About", title: "About Me" };
+
+  const keyframe = (x) => keyframes`
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: ${x}%;
+        }
+  `;
+
+  const Animate = styled.div`
+    animation: ${(props) => keyframe(props.reached)};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+  `;
 
   return (
     <div className={style.container}>
@@ -72,14 +88,23 @@ function About() {
           <div className={style.boxSkill}>
             <h2 className={style.subTitle2}>SKILLS</h2>
             <div className={style.containerSkills}>
-              {Skills.map((item) => (
-                <div className={style.boxSkills}>
+              {Skills.map((item, index) => (
+                <div className={style.boxSkills} key={index}>
                   <img
                     src={item.icon}
                     alt={item.name}
                     className={style.skill}
                   />
-                  <label className={style.nameSkill}>{item.name}</label>
+                  <div className={style.percent}>
+                    <p className={style.lable}>
+                      {item.name}
+                      <span style={{ float: "right" }}>{item.reached}%</span>
+                    </p>
+                    <Animate reached={item.reached}>
+                      <div className={style.reached}></div>
+                    </Animate>
+                    <div className={style.notReached}></div>
+                  </div>
                 </div>
               ))}
             </div>
