@@ -10,19 +10,12 @@
 }
 
 body {
-  /* light theme */
-  --light-color: #7BDB6B;
-  --light-background-color: #fff;
-  --light-text-name-color: #7BDB6B;
-  --light-text-job-color: #B6E388;
-  --light-text-intro-color: rgb(129, 128, 128);
 
-  /* dark theme */
-  --dark-color: #7BDB6B;
-  --dark-background-color: #333;
-  --dark-text-name-color: #FFB400;
-  --dark-text-job-color: #f8c651;
-  --dark-text-intro-color: rgb(240, 236, 236);
+  --color: #7BDB6B;
+  --background-color: #fff;
+  --text-name-color: #7BDB6B;
+  --text-job-color: #B6E388;
+  --text-intro-color: rgb(129, 128, 128) ;
 
   font-family: "roboto", sans-serif;
 

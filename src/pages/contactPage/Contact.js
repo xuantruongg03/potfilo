@@ -1,11 +1,12 @@
+import emailjs from "@emailjs/browser";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Player } from "@lottiefiles/react-lottie-player";
 import clsx from "clsx";
+import { useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import Title from "../../title/Title";
 import style from "./Contact.module.scss";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 const data = { background: "Contact", title: "Contact Me" };
 
@@ -15,6 +16,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSend, setIsSend] = useState(false);
+  const stateDarkMode = useSelector(state => state.DarkMode);
 
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -87,7 +89,7 @@ function Contact() {
             <Player
               autoplay
               loop
-              src={require("../../assets/json/mail.json")}
+              src={require(`../../assets/json/mail${stateDarkMode ? "-yellow" : ""}.json`)}
               className={style.mail}
             ></Player>
           </div>

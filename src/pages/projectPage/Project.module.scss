@@ -27,7 +27,7 @@
         color: rgb(100, 97, 97);
 
         &:hover {
-            background-color: #7BDB6B;
+            background-color: var(--color);
             color: #fff;
         }
 
@@ -76,7 +76,7 @@
 
 
     .active {
-        background-color: #7BDB6B;
+        background-color: var(--color);
         color: #fff;
     }
 }
@@ -262,7 +262,6 @@
         top: 22%;
     }
 }
-
 
 @media screen and (max-width: 850px) {
     .type {

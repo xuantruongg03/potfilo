@@ -13,13 +13,14 @@ import style from "./Menu.module.scss";
 
 function Menu() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.NotificationReducer);
+  const state = useSelector((state) => state.DarkMode);
 
   //đổi màu nền
   const handleChangeTheme = () => 
   {
     dispatch({
       type: 'CHANGE_THEME',
+      state: true
     })
   };
 

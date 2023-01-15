@@ -46,12 +46,10 @@
 
     .subTitle {
         font-size: 30px;
-        color: var(--light-text-intro-color);
+        color: var(--text-intro-color);
         margin: 25px 0;
-        color: #666666;
+        // color: #666666;
     }
-
-
 }
 
 .containerInfo {
@@ -71,19 +69,22 @@ ul li {
 }
 
 .lable {
-    color: rgb(83, 82, 82);
+    // color: rgb(83, 82, 82);
+    color: var(--text-intro-color);
     font-weight: 600;
     margin: 0 5px 5px 0;
 }
 
 .content {
-    color: rgb(116, 113, 113);
+    // color: rgb(116, 113, 113);
+    color: var(--text-intro-color);
 }
 
-.link {
-    color: rgb(140, 139, 139);
-    text-decoration: none;
-}
+// .link {
+//     // color: rgb(140, 139, 139);
+//     color: var(--text-intro-color);
+//     text-decoration: none;
+// }
 
 .downloadCV {
     display: flex;
@@ -94,7 +95,7 @@ ul li {
     justify-content: space-between;
 
     .boxDownloadCV {
-        background-color: #7BDB6B;
+        background-color: var(--color);
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -117,7 +118,7 @@ ul li {
     .lableDownloadCV {
         font-size: 20px;
         font-weight: 600;
-        color: #7BDB6B;
+        color: var(--color);
         margin-left: 10px;
         margin-top: 10px;
     }
@@ -137,7 +138,7 @@ ul li {
     height: 50px;
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: #7BDB6B;
+    background-color: var(--color);
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -165,7 +166,7 @@ ul li {
 
     .placeExp {
         text-transform: uppercase;
-        color: #666666;
+        color: var(--text-intro-color);
     }
 }
 
@@ -175,7 +176,7 @@ ul li {
     left: 0;
     right: 0;
     background-color: #fff;
-    border: 1px solid #7BDB6B;
+    border: 1px solid var(--color);
     margin: 10px auto;
 
     &:hover {
@@ -191,7 +192,8 @@ ul li {
 .subTitle2 {
     font-size: 30px;
     margin: 25px 0;
-    color: #666666;
+    // color: #666666;
+    color: var(--text-intro-color);
     text-align: center;
 }
 
@@ -221,7 +223,7 @@ ul li {
         }
 
         .reached {
-            background-color: #7BDB6B;
+            background-color: var(--color);
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             height: 10px;

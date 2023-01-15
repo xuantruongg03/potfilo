@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import NotificationReducer from "./alertReducer";
+import DarkMode from "./changeTheme";
 
 const rootReducer = combineReducers({
-    NotificationReducer
+    DarkMode
   })
 export default rootReducer;

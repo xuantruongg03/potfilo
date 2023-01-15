@@ -1,5 +1,6 @@
 .homePage {
-    background-color: var(--light-background-color);
+    // background-color: var(--background-color);
+    // background-color: black;
     min-height: fit-content;
     // z-index: -9999;
 }
@@ -8,7 +9,7 @@
     height: 200%;
     width: 100%;
     transform: rotate(-15deg);
-    background-color: #7BDB6B;
+    background-color: var(--color);
     position: fixed;
     left: -75%;
     //   z-index: -1;
@@ -41,7 +42,7 @@
 .name {
     font-size: 50px;
     font-weight: 800;
-    color: var(--light-text-name-color);
+    color: var(--text-name-color);
     text-transform: uppercase;
     margin: 0;
 }
@@ -49,7 +50,7 @@
 .job {
     font-size: 30px;
     font-weight: 600;
-    color: var(--light-text-job-color);
+    color: var(--text-job-color);
     text-transform: uppercase;
     margin: 10px 0;
 }
@@ -62,7 +63,7 @@
     margin: 0;
     line-height: 35px;
     text-align: justify;
-    color: var(--light-text-intro-color);
+    color: var(--text-intro-color);
 }
 
 @media screen and (max-width: 1200px) {

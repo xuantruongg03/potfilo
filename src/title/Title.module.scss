@@ -1,6 +1,5 @@
 .boxTitle {
     text-transform: uppercase;
-    // margin: 0 150px;
     .titleBackground {
         position: relative;
         
@@ -10,16 +9,16 @@
         line-height: 250px;
         font-size: 110px;
         text-transform: uppercase;
-        font-weight: 700;
-        color: rgb(227, 224, 224);
+        font-weight: bolder;
+        color: var(--color);
         letter-spacing: 30px;
-        opacity: 0.5;
+        opacity: 0.2;
     }
 
     .title {
         font-size: 60px;
         font-weight: 800;
-        color: gray;
+        color: var(--text-intro-color);
         position: absolute;
         top: 12%;
         left: 0;
@@ -29,7 +28,7 @@
         opacity: 1 !important;
 
         .span {
-            color: #7BDB6B;
+            color: var(--color);
         }
     }
 }
@@ -42,7 +41,6 @@
 
     .titleBackground{
         line-height: 150px;
-        color: #7BDB6B !important;
         font-weight: 800 !important;
         opacity: 1 !important;
     }
@@ -53,7 +51,6 @@
     .titleBackground{
         font-size: 90px !important;
         line-height: 150px;
-        color: #7BDB6B !important;
         font-weight: 800 !important;
         opacity: 1 !important;
     }
@@ -64,34 +61,30 @@
     .titleBackground{
         font-size: 80px !important;
         line-height: 150px;
-        color: #7BDB6B !important;
+
         font-weight: 800 !important;
         opacity: 1 !important;
     }
 }
-
 
 @media screen and (max-width: 550px) {
 
     .titleBackground{
         font-size: 65px !important;
         line-height: 150px;
-        color: #7BDB6B !important;
         font-weight: 800 !important;
         opacity: 1 !important;
     }
 }
 
-
 @media screen and (max-width: 480px) {
 
     .titleBackground{
         font-size: 50px !important;
-        color: #7BDB6B !important;
-        letter-spacing: 20px !important;
+        letter-spacing: 10px !important;
         line-height: 150px !important;
         height: 120px !important;
-        font-weight: 800 !important;
+        font-weight: 900 !important;
         opacity: 1 !important;
     }
 }
@@ -100,7 +93,6 @@
 
     .titleBackground{
         font-size: 40px !important;
-        color: #7BDB6B !important;
         letter-spacing: 20px !important;
         line-height: 150px !important;
         height: 120px !important;
