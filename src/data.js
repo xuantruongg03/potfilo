@@ -32,7 +32,7 @@ const Info = [
 const Projects = [
   {
     id: 1,
-    name: "Dong Ho Dem Nguoc",
+    name: "Countdown Timer",
     img: require("./assets/images/dong-ho.png"),
     created: "2022",
     des: "This is the first product. The product is used to count down a predetermined time.",
@@ -44,19 +44,19 @@ const Projects = [
   },
   {
     id: 2,
-    name: "Web bán máy tính",
+    name: "Computer Store",
     img: require("./assets/images/store/store1.png"),
     des: "A relatively mature product that still has a few features in development. This is basically an e-commerce website that sells computers and computer accessories.",
     created: "2022",
     frontEnd: "ReactJS",
-    backEnd: "",
+    backEnd: "NodeJS, MySQL",
     demo: "https://xuantruongg03.github.io/store/",
     source: "",
     role: "Web",
   },
   {
     id: 3,
-    name: "App tính tiền tip",
+    name: "App Calculator Tip",
     img: require("./assets/images/tip-cal.png"),
     des: "The app is used to calculate tip and includes some basic features such as tip calculation after each order and total tip collected.",
     created: "2022",
