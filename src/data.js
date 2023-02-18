@@ -50,7 +50,7 @@ const Projects = [
     created: "2022",
     frontEnd: "ReactJS",
     backEnd: "NodeJS, MySQL",
-    demo: "https://xuantruongg03.github.io/store/",
+    demo: "",
     source: "",
     role: "Web",
   },
@@ -83,40 +83,40 @@ const Projects = [
 const Skills = [
   {
     name: "HTML",
-    icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
+    icon: require("./assets/images/html.png"),
     reached: 90
   },
-  { name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png", reached: 90 },
+  { name: "CSS", icon: require("./assets/images/css.jpg"), reached: 90 },
   {
     name: "JavaScript",
-    icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
+    icon: require("./assets/images/js.jpg"),
     reached: 80
   },
   {
     name: "ReactJS",
-    icon: "https://img.icons8.com/color/48/000000/react-native.png",
+    icon: require("./assets/images/reactjs.jpg"),
     reached: 80
   },
-  { name: "SASS", icon: "https://img.icons8.com/color/48/000000/sass.png", reached: 70 },
+  { name: "SASS", icon: require('./assets/images/sass.jpg'), reached: 70 },
   {
-    name: "Bootstrap",
-    icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+    name: "Tailwind",
+    icon: require("./assets/images/tailwind.jpg"),
     reached: 70
   },
   {
     name: "Java",
-    icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png",
+    icon: require("./assets/images/java.jpg"),
     reached: 80
   },
   {
     name: "C++",
-    icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
+    icon: require("./assets/images/c++.jpg"),
     reached: 80
   },
-  { name: "SQL", icon: "https://img.icons8.com/color/48/000000/sql.png", reached: 80 },
+  { name: "SQL", icon: require("./assets/images/sql.jpg"), reached: 80 },
   {
     name: "GitHub",
-    icon: "https://img.icons8.com/fluent/48/000000/github.png",
+    icon: require("./assets/images/github.jpg"),
     reached: 70
   },
 ];
