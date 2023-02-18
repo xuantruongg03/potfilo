@@ -17,3 +17,6 @@ This is my potfilo project with ReactJS
 - Send email
 - Detail project
 - ...
+
+# Link deploy
+- https://xuan-truong-03.netlify.app/
