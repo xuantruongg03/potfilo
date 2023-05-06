@@ -32,7 +32,7 @@ const Info = [
 const Projects = [
   {
     id: 1,
-    name: "Countdown Timer",
+    name: "Clock Countdown",
     img: require("./assets/images/dong-ho.png"),
     created: "2022",
     des: "This is the first product. The product is used to count down a predetermined time.",
@@ -45,7 +45,7 @@ const Projects = [
   {
     id: 2,
     name: "Computer Store",
-    img: require("./assets/images/store/store1.png"),
+    img: require("./assets/images/store/home1.png"),
     des: "A relatively mature product that still has a few features in development. This is basically an e-commerce website that sells computers and computer accessories.",
     created: "2022",
     frontEnd: "ReactJS",
